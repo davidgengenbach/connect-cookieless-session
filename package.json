@@ -1,5 +1,5 @@
 {
-  "name": "cookieless-session",
+  "name": "connect-cookieless-session",
   "version": "0.0.0",
   "description": "cookieless session - finally :)",
   "main": "index.js",
