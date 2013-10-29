@@ -1,4 +1,7 @@
-connect-cookieless-session
+ connect-cookieless-session
 ==========================
 
-Cookieless sessions :)
+### Todos
+* maxAge
+* more Testing
+* refactoring :)
