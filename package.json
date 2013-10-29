@@ -1,0 +1,24 @@
+{
+  "name": "cookieless-session",
+  "version": "0.0.0",
+  "description": "cookieless session - finally :)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "express": "~3.4.3",
+    "zombie": "~2.0.0-alpha24",
+    "asset": "~0.4.13",
+    "connect": "~2.10.1",
+    "session-mongoose": "~0.3.2",
+    "lodash": "~2.2.1",
+    "request": "~2.27.0",
+    "connect-redis": "~1.4.5"
+  }
+}
