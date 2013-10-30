@@ -37,6 +37,7 @@ CookielessSession.prototype.onRequest = function(req, res, next) {
 };
 
 CookielessSession.prototype.saveSession = function(req, cb) {
+	req.session = req.session || {};
 	req.session.cookie = {
 		maxAge: 999999999999
 	};
