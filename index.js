@@ -15,9 +15,9 @@ CookielessSession.prototype.onRequest = function(req, res, next) {
 	req.sessionId = sessionId;
 	req.session = req.session || {};
 
-	if(req.sessionId) {
+	if (req.sessionId) {
 		this.store.get(req.sessionId, function(err, result) {
-			if(result) {
+			if (result) {
 				req.session = result;
 			}
 			next();
@@ -27,10 +27,10 @@ CookielessSession.prototype.onRequest = function(req, res, next) {
 	}
 
 	res.on('finish', function() {
-		if(!req.sessionId) delete req.session;
+		if (!req.sessionId) delete req.session;
 		self.saveSession(req, function(err) {
-			if(err) {
-				console.log(":(");
+			if (err) {
+				console.error("cookieless-session#res.on('finish'):", err);
 			}
 		});
 	});
