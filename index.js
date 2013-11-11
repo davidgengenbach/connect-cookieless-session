@@ -12,7 +12,7 @@ CookielessSession.prototype.onRequest = function(req, res, next) {
 	var self = this,
 		sessionId = req.headers[header];
 
-	req.sessionId = sessionId;
+	req.sessionId = sessionId || req.query['x-user-session'];
 	req.session = req.session || {};
 
 	if (req.sessionId) {
